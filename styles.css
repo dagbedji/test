@@ -1,0 +1,488 @@
+
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+  
+  body {
+    overflow-x: hidden;
+    margin:  0 ; 
+    padding: 0 ;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+    
+    /* Logo CSS  commun*/
+    .logo-img {
+      width: 200px;
+      height: auto;
+    }
+    
+    .brand-text {
+      font-family: Recoleta, serif;
+      color: #00308F;
+      font-size: 1.5em;
+      white-space: nowrap; /* Prevents text from wrapping */
+    }
+    @media (max-width: 576px) {
+      .logo-img {
+        width: 80px; /* Reduce logo size on small screens */
+        max-width: 100%;
+        height: auto;
+        margin-right: 0%;
+      }
+      
+      .brand-text {
+        font-family: Recoleta, serif;
+        font-size: 0.8em; /* Adjust this value as needed */
+        line-height: 1.2em; /* Ensure proper line spacing */
+        max-width: 100%; /* Make sure text doesn't overflow */
+        overflow-wrap: break-word; /* Break long words */
+      }
+    }
+  /* fin logo CSS commun */
+  
+  /* Navbar CSS - Start(commun) */
+  
+  /* General Reset */
+  body, nav {
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      width: 100%;
+    }
+    
+    ul{
+      margin-top: 0;
+    }
+    nav ul {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: center; /* Center the items in the navbar */
+      align-items: center;
+      background-color: #1d1d1d;
+      padding: 10px 0; /* Adjust padding to increase navbar height */
+    }
+    
+    nav li {
+      margin: 0 30px; /* Add space between each item */
+      height: 55px;
+    }
+    
+    nav ul li a {
+      height: 100%;
+      padding: 0 20px; /* Adjust padding for each item */
+      color: #7F8C8D;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      font-size: 18px; /* Increase the font size */
+    }
+    
+    /* Hover and Focus Effects */
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: #e9ecef;
+    }
+    
+    nav ul li a:active {
+      color: #ffffff;
+    }
+    
+    /* Sidebar Styling */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 250px;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    
+    .sidebar li {
+      width: 100%;
+    }
+    
+    .sidebar a {
+      width: 100%;
+    }
+    
+    /* Hamburger Menu Button */
+    .menu-button {
+      margin-left: auto; /* Pushes the hamburger menu to the right */
+      display: none;
+    }
+    
+    @media(max-width: 1050px) {
+      .hideOnMobile {
+          display: none;
+      }
+      
+      .menu-button {
+          display: block;
+      }
+    
+      nav li {
+          height: 45px;
+      }
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+  
+  
+    .navebar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.3s backdrop-filter 0.3s;
+    }
+    
+    
+    /* Styles for the navbar */
+    nav.navbare {
+      background-color: #F5FFFA; /* Keep this the initial color */
+      transition: background-color 0.3s ease; /* Smooth transition */
+    }
+    
+    
+    .navbar-transparent {
+      background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent */
+    }
+    .location h4{
+      font-weight:lighter;
+      text-align: center;
+      margin-top: 70px;
+    }
+    /* Navbar CSS - end */
+  
+  .lead{
+    font-size: 1.1rem;
+  }
+  
+    /* image container pas commun */
+
+    
+    .image-container {
+        width: 100%; /* Make sure the container takes full width of its parent */
+        height: 350px; /* Set a fixed height */
+        overflow: hidden; /* Hide any part of the image that overflows */
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+    
+    
+  
+    .image-container img {
+      width: 100%; /* Image takes full width of its container */
+      height: 100%; /* Image fills the height of the container */
+      object-fit: cover; /* Ensures the image covers the container without distortion */
+      
+    }
+    .image-container .text {
+      position: absolute;
+      color: #3C9D9B; /* Text color */
+      left: 60%; /* Horizontal center */
+      top: 30%; /* Vertical center */
+      font-size: 35px; /* Font size */
+      transform: translate(-50%, -50%); /* Center the text by translating it */
+      text-align: center; /* Center text content */
+      padding: 0 1rem; /* Padding for better readability on smaller screens */
+    }
+    @media (max-width: 576px) {
+      
+      .image-container .text {
+        font-size: 20px; /* Reduce font size on small screens */
+        line-height: 1.2; /* Adjust line height to fit the text into two lines */
+        width: 60%; /* Restrict the width to ensure text breaks into two lines */
+        margin-top: 50px;
+        margin-left: 20px;
+      }
+      .button-container {
+        position: static; /* Remove absolute positioning on small screens */
+        display: flex;
+        justify-content: center; /* Align the button to the right */
+        width: 100%; /* Ensure the container takes full width */
+        margin-top: 20px; /* Add some space above the button if needed */
+      }
+      .custom-contact-button {
+        display: flex;
+        align-items: center;
+        background-color: #3C9D9B !important; /* Change background color */
+        color: white !important; /* Change text color */
+        font-size: 15px !important; /* Change font size */
+        border-radius: 5px !important; /* Adjust the border radius */
+        margin-top: 15px !important;
+        margin-left: 40px;
+      }
+    }
+  /* fin image container */
+  
+  /* image container pas commun */
+    
+    .image-container {
+        width: 100%; /* Make sure the container takes full width of its parent */
+        height: 350px; /* Set a fixed height */
+        overflow: hidden; /* Hide any part of the image that overflows */
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+    
+    
+  
+    .image-container img {
+      width: 100%; /* Image takes full width of its container */
+      height: 100%; /* Image fills the height of the container */
+      object-fit: cover; /* Ensures the image covers the container without distortion */
+      
+    }
+    .image-container .text {
+      position: absolute;
+      color: #3C9D9B; /* Text color */
+      left: 60%; /* Horizontal center */
+      top: 30%; /* Vertical center */
+      font-size: 35px; /* Font size */
+      transform: translate(-50%, -50%); /* Center the text by translating it */
+      text-align: center; /* Center text content */
+      padding: 0 1rem; /* Padding for better readability on smaller screens */
+    }
+    @media (max-width: 576px) {
+      .image-container .text {
+        font-size: 20px; /* Reduce font size on small screens */
+        line-height: 1.2; /* Adjust line height to fit the text into two lines */
+        width: 60%; /* Restrict the width to ensure text breaks into two lines */
+        margin-top: 50px;
+        margin-left: 20px;
+      }
+    }
+  /* fin image container */
+  
+  
+  /* footer CSS  */
+.footerdescrip {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center;
+    padding: 10px;
+    position: relative; /* Allows the icons to be positioned separately */
+  }
+  
+  .description {
+    text-align: center;
+  }
+  .description a{
+    text-decoration: none;
+    color: inherit; /* Keeps the icon color */
+  }
+  
+  .social-icons {
+    position: absolute;
+    right: 0; /* Aligns the icons to the right edge */
+    display: flex;
+    gap: 15px; /* Adds spacing between the icons */
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    color: inherit; /* Keeps the icon color */
+  }
+  
+  .social-icons svg {
+    transition: transform 0.3s;
+  }
+  
+  .social-icons svg:hover {
+    transform: scale(1.2); /* Adds a hover effect */
+  }
+  .description p {
+    margin-top: 10px;
+  }
+  
+  /* end footer CSS  */
+  
+  @media (max-width: 576px) {
+    .description {
+      font-size: 15px; /* Reduce font size on small screens */
+      line-height: 1.2; /* Adjust line height to fit the text into two lines */
+      width: 50%; /* Restrict the width to ensure text breaks into two lines */
+      margin-top: 10px;
+    }
+    .description img {
+      width: 30%;
+    }
+    .description p {
+      margin-top: 10px;
+    }
+   
+  }
+
+
+.featurette-divider {
+    margin: 5rem 0;
+}
+
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+}
+
+
+
+
+
+
+
+
+/* Rest of your custom styles */
+
+
+
+
+
+.no-bootstrap *{
+  box-sizing: border-box;
+  padding: 0;
+}
+.no-bootstrap .firstcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 70vh;
+  background: linear-gradient(to bottom, #CED6FB, #ECEFFE);
+
+}
+
+.no-bootstrap .card-wrapper{
+  max-width: 900px;
+  margin: 0 210px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+.no-bootstrap .card-list .card-item {
+  list-style: none;
+}
+.no-bootstrap .card-list .card-item .card-link{
+  user-select: none;
+  display: block;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease;
+}
+.no-bootstrap .card-list .card-item .card-link:active{
+  cursor: grabbing;
+}
+.no-bootstrap .card-list .card-item .card-link:hover{
+  border-color: #5372F0;
+}
+.no-bootstrap .card-list .card-item .card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+.no-bootstrap .card-list .card-link .badge{
+  color: #5372F0;
+  margin: 16px 0 18px;
+  font-size: 0.95;
+  font-weight: 500;
+  padding: 8px 16px;
+  background-color: #DDE4FF;
+  width: fit-content;
+  border-radius: 50px;
+
+}
+
+.no-bootstrap .card-list .card-link .card-title{
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.no-bootstrap .card-list .card-link .card-button{
+  height: 35px;
+  width: 35px;
+  color: #5372F0;
+  border-radius: 50%;
+  margin: 30px 0 5px;
+  background-color: none;
+  cursor: pointer;
+  border: 2px solid #5372F0;
+  transform: rotate(-45deg);
+}
+.no-bootstrap .card-list .card-link:hover .card-button{
+  color: #fff;
+  background-color: #5372F0;
+}
+.no-bootstrap .card-list .card-link .badge.gamer{
+  color: #856404;
+  background-color: #fff3cd;
+}
+.no-bootstrap .card-list .card-link .badge.editor{
+  color: #B25A2B;
+  background-color: #FFE3D2;
+}
+.no-bootstrap .card-list .card-link .badge.marketer{
+  color: #50C878;
+  background-color: #D0F0C0;
+}
+
+
+.no-bootstrap .card-wrapper .swiper-pagination-bullet{
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: #5372F0;
+
+}
+.no-bootstrap .card-wrapper .swiper-pagination-bullet-active{
+  opacity: 1;
+}
+.no-bootstrap .card-wrapper .swiper-slide-button{
+  color: #5372F0;
+  margin-top: -35px;
+}
+
+@media screen and (max-width: 768px){
+  .no-bootstrap .card-wrapper{
+      margin: 0 10px 25px;
+  }
+  .no-bootstrap .card-wrapper .swiper-slide-button{
+      display: none;
+  }
+
+
+}
