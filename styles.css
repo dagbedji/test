@@ -26,7 +26,7 @@ html {
   .brand-text {
     font-family: Recoleta, serif;
     color: #00308F;
-    font-size: 1.5em;
+    font-size: 1.8em;
     white-space: nowrap; /* Prevents text from wrapping */
   }
   @media (max-width: 576px) {
@@ -43,6 +43,10 @@ html {
       line-height: 1.2em; /* Ensure proper line spacing */
       max-width: 100%; /* Make sure text doesn't overflow */
       overflow-wrap: break-word; /* Break long words */
+    }
+    .nouschoisis img{
+      height: 200px;
+      width: 300px;
     }
   }
 /* fin logo CSS commun */
@@ -648,6 +652,10 @@ li {
     width: 90%;
     height: auto;
   }
+  .animated-list img{
+    width: 60px;
+    height: 40px;
+  }
 
 }
 /* nous choisi */
@@ -665,7 +673,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25vh;
+  height: 10vh;
   background: #b9cebc; /* Gradient background */
   box-sizing: border-box; /* Include padding and border in element’s width/height */
 }
@@ -1709,48 +1717,6 @@ h2, h3 {
 
 
 
-/* footer CSS  */
-.footerdescrip {
-  display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center;
-  padding: 10px;
-  position: relative; /* Allows the icons to be positioned separately */
-}
-
-.description {
-  text-align: center;
-}
-.description a{
-  text-decoration: none;
-  color: inherit; /* Keeps the icon color */
-}
-
-.social-icons {
-  position: absolute;
-  right: 0; /* Aligns the icons to the right edge */
-  display: flex;
-  gap: 15px; /* Adds spacing between the icons */
-}
-
-.social-icons a {
-  text-decoration: none;
-  color: inherit; /* Keeps the icon color */
-}
-
-.social-icons svg {
-  transition: transform 0.3s;
-}
-
-.social-icons svg:hover {
-  transform: scale(1.2); /* Adds a hover effect */
-}
-.description p {
-  margin-top: 10px;
-}
-
-/* end footer CSS  */
-
 @media (max-width: 576px) {
   .description {
     font-size: 15px; /* Reduce font size on small screens */
@@ -1763,6 +1729,7 @@ h2, h3 {
   }
   .description p {
     margin-top: 10px;
+    text-align: center;
   }
  
 }
@@ -2006,4 +1973,250 @@ h2, h3 {
   font-weight: bold;
   font-family: inherit;
   font-style: italic;
+}
+
+
+
+
+
+
+
+/* Footer container */
+.footerdescrip {
+  display: flex;
+  justify-content: space-between; /* Evenly space out elements */
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap; /* Wrap elements on smaller screens */
+}
+
+/* Description section */
+.description {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description a {
+  text-decoration: none;
+  color: inherit;
+  margin-top: 50px;
+}
+
+.description p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-icons svg {
+  transition: transform 0.3s;
+}
+
+.social-icons svg:hover {
+  transform: scale(1.2);
+}
+
+/* Newsletter section */
+.newsletter-container {
+  text-align: left;
+}
+
+.news h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.news p {
+  margin-bottom: 1rem;
+}
+
+/* Input container adjustments */
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%; /* Ensure full width */
+  align-items: center; /* Vertically center the items */
+}
+
+@media (min-width: 576px) {
+  .input-container {
+    flex-direction: row;
+    width: 50%; /* Adjust the width for larger screens */
+  }
+}
+
+.email-input {
+  flex-grow: 1;
+  padding: 0.6rem; /* Ensure the input has consistent padding */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Take full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  height: 40px; /* Set a fixed height for alignment */
+  width: 180px;
+}
+
+/* Button adjustments */
+.btn-subscribe {
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px; /* Match the height with input for alignment */
+  display: inline-block;
+  margin-top: 0;
+  width: 120px;
+  margin: 0;
+}
+
+.btn-subscribe:hover {
+  background-color: #0056b3;
+}
+
+/* Visually hidden class */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+
+  .footerdescrip {
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: center; /* Align items to the left */
+  }
+
+  .input-container {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .description p {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .description img{
+    margin-left: 70px;
+  }
+  .newsletter-container h5{
+    text-align: center;
+  }
+  .news form{
+    margin-bottom: 15px;
+  }
+}
+
+
+
+/* end footer CSS  */
+
+
+/* General body styling */
+body>.front {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa; /* A unique soft cyan background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container for the form */
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Text container styling */
+.text-container {
+  max-width: 600px;
+  background-color: #ffffff; /* White background for the content */
+  padding: 30px;
+  text-align: justify;
+}
+
+/* Header styling */
+.text-container h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00796b; /* Unique teal color for the heading */
+}
+
+/* Paragraph styling */
+.text-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* Dark grey for readable text */
+}
+@media (max-width: 768px) {
+  .text-container {
+    padding: 20px;
+    font-size: 14px; /* Decrease font size */
+  }
+
+  .text-container h1 {
+    font-size: 20px; /* Reduce heading size */
+  }
+
+  .text-container p {
+    font-size: 14px; /* Reduce paragraph text size */
+  }
+
+  button {
+    font-size: 14px; /* Reduce button text size */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+}
+
+/* Media query for very small screens (less than 480px wide) */
+@media (max-width: 480px) {
+  .text-container {
+    padding: 15px;
+    font-size: 12px; /* Further decrease font size */
+  }
+
+  .text-container h1 {
+    font-size: 18px; /* Further reduce heading size */
+  }
+
+  .text-container p {
+    font-size: 12px; /* Further reduce paragraph text size */
+  }
+
+  button {
+    font-size: 12px; /* Further reduce button text size */
+    padding: 6px 12px; /* Adjust button padding for small screens */
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1); /* Smaller checkbox for very small screens */
+  }
 }
